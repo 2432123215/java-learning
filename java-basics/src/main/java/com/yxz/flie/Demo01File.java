@@ -21,7 +21,10 @@ public class Demo01File {
         //表示当前目录
         File path = new File("");
         System.out.println(path.getAbsolutePath());
-
+        File f = new File("C:\\Users\\yxz\\Desktop\\课件笔记源码资料\\4_文档资料\\API文档2\\1.txt");
+        
+        boolean mkdirs = f.mkdirs();
+        System.out.println(mkdirs);
         File file = new File("C:\\Users\\yxz\\Desktop\\课件笔记源码资料\\4_文档资料\\API文档");
         //API文档
         System.out.println(file.getName());
