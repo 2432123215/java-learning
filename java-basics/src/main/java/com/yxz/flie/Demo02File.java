@@ -10,7 +10,23 @@ import java.io.IOException;
 public class Demo02File {
     public static void main(String[] args) throws IOException {
 //        newfiletest();
-        creatdir();
+//        creatdir();
+        creatdirs();
+    }
+
+    /**
+     * 根据路径
+     * @throws IOException
+     */
+    private static void creatdirs() throws IOException {
+        File file = new File("d:\\bc\\javad\\cn\\123456\\444\\1.java");
+        System.out.println(file.getName());
+        String[] split = file.getPath().split(file.getName());
+        File file1 = new File(split[0]);
+        System.out.println(file1.exists());
+        file1.mkdirs();
+        file.createNewFile();
+
     }
 
     public static void newfiletest() throws IOException {
