@@ -3,6 +3,7 @@ package com.yxz.io;
 
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
@@ -13,7 +14,7 @@ import java.io.IOException;
  * @Version 1.0
  **/
 public class Demo03IO {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
 //        show();
         show1();
     }
@@ -22,7 +23,7 @@ public class Demo03IO {
      * 出现乱码 这是单个字节转换
      * @throws IOException
      */
-    private static void show1() throws IOException {
+    private static void show1() throws Exception {
         FileInputStream fileInputStream = new FileInputStream("java-basics\\5.txt");
         int len=0;
         byte[] bytes = new byte[1024];

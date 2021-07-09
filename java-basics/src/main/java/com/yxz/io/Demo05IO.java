@@ -30,6 +30,8 @@ public class Demo05IO {
             String property = properties.getProperty(s);
             System.out.println(s+property);
         }
+
+        System.out.println("=========");
         FileWriter fileWriter = new FileWriter("java-basics\\properties.properties");
         properties.store(fileWriter,"备注");
         fileWriter.close();
